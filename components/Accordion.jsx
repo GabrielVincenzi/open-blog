@@ -38,7 +38,7 @@ function Accordion() {
                 >
                     <div className='content'>
                         <div>
-                            <h3 className='text-3xl font-semibold mb-4 text-white'>{card.header}</h3>
+                            <h3 className='text-3xl font-semibold mb-8 text-white border-b pb-4'>{card.header}</h3>
                             <p className='text-lg text-gray-100 font-normal mb-8'>{card.text}</p>
                         </div>
                     </div>

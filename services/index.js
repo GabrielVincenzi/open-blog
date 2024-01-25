@@ -5,7 +5,7 @@ import { GraphQLClient } from 'graphql-request';
 
 
 // New endpoint
-const graphQLClient = new GraphQLClient('https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clrlu35ep0dnj01w3jxlg19yj/master');
+const graphQLClient = new GraphQLClient(process.env.HYGRAPH_DEV_ENDPOINT);
 
 export const getPosts = async () => {
 
@@ -70,6 +70,12 @@ export const getPostDetails = async (slug) => {
             }
             content{
                 raw
+            }
+            comments {
+              id
+              name
+              email
+              comment
             }
         }
     }

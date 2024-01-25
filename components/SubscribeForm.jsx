@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react'
 
 // Send the form data to our API route
 export const submitSubscribe = async (obj) => {
-    const result = await fetch(`/api/subforms`, { //Problem in fetch api/subforms
+    const result = await fetch(`/api/subforms`, { //Problem in fetch api/subforms only while developing
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
@@ -45,32 +45,30 @@ const Subscribeform = () => {
     }
 
     return (
-        <div className='bg-white shadow-lg rounded-lg p-8 pb-12 mb-8 lg:w-1/2 justify-center items-center my-0 mx-auto'>
-            <h3 className='text-xl mb-8 font-semibold border-b pb-4'>Leave a Reply</h3>
-            <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-4'>
-                <input
-                    type={'text'}
+        <div className='p-4'>
+            <h3 className='text-3xl mb-8 font-semibold border-b pb-4'>Vuoi partecipare?</h3>
+            <p className='text-lg text-gray-700 font-normal mb-8'>Senza impegno o con tutto quello che hai, per hobby o per senso dell'informazione qui sarai ben accettə.</p>
+            <div className='grid grid-cols-1 gap-4 mb-4'>
+                <input type='text'
                     ref={nameEl}
-                    className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
-                    placeholder='Name'
+                    placeholder='Nome'
                     name='name'
-                />
-                <input
-                    type='email'
+                    className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700' />
+                <input type='text'
                     ref={emailEl}
-                    className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700'
                     placeholder='Email'
                     name='email'
-                />
+                    className='py-2 px-4 outline-none w-full rounded-lg focus:ring-2 focus:ring-gray-200 bg-gray-100 text-gray-700' />
             </div>
-            {error && <p className='text-xs text-red-500'>All fields are required.</p>}
+            {error && <p className='text-xs text-red-500'>Tutti i campi sono obbligatori</p>}
             <div className='mt-8'>
-                <button type='button' onClick={handleSubmission}
-                    className='transition duration-500 ease hover:bg-gray-500 inline-block bg-gray-700 text-lg rounded-full text-white py-3 px-8 cursor-pointer'
+                <button type='button'
+                    onClick={handleSubmission}
+                    className='transition duration-500 ease bg-teal-500 hover:bg-white hover:text-black border-teal-500 border inline-block text-white rounded-full px-8 py-3 cursor-pointer'
                 >
-                    Post Comment
+                    Fai la tua scelta
                 </button>
-                {showSuccessMessage && <span className='text-xl float-right font-semibold mt-3 text-green-500'>Comment Submitted for review</span>}
+                {showSuccessMessage && <span className='text-xs float-right mt-3 text-green-500'>Preparati ad iniziare questo viaggio.</span>}
             </div>
         </div>
     )
