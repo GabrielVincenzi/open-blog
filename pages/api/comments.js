@@ -4,14 +4,14 @@
 
 import { GraphQLClient, gql } from 'graphql-request';
 
-const graphqlAPI = process.env.GRAPHCMS_ENDPOINT
+const graphqlAPI = process.env.HYGRAPH_DEV_ENDPOINT
 
 export default async function comments(req, res) {
   const { name, email, slug, comment } = req.body;
 
   const graphQLClient = new GraphQLClient(graphqlAPI, {
     headers: {
-      authorization: `Bearer ${process.env.GRAPHCMS_TOKEN}`,
+      authorization: `Bearer ${process.env.HYGRAPH_DEV_AUTH_TOKEN}`,
     }
   })
 

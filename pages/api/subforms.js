@@ -2,7 +2,7 @@ import { GraphQLClient, gql } from 'graphql-request';
 
 // Next.js creates and exports a function named handler that returns a JSON object.
 
-const graphqlAPI = process.env.GRAPHCMS_ENDPOINT
+const graphqlAPI = process.env.HYGRAPH_DEV_ENDPOINT
 
 export default async function subforms(req, res) {
     const { name, email } = req.body;

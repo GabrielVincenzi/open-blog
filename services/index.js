@@ -180,7 +180,7 @@ export const getCategoryPost = async (slug) => {
 
 
 // Http request to our own Next.js backend
-// Use api.js to send comments to GraphCMS
+// Use api.js to send comments to Hygraph
 export const submitComment = async (obj) => {
   const result = await fetch('/api/comments', {
     method: 'POST',
