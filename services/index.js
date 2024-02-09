@@ -1,11 +1,10 @@
-import { gql } from 'graphql-request';
-import { GraphQLClient } from 'graphql-request';
+import { gql, GraphQLClient } from 'graphql-request';
 
 // Delay the fetching in order to not exceed the 5 req/s
 
-
+const graphqlAPI = process.env.HYGRAPH_DEV_ENDPOINT
 // New endpoint
-const graphQLClient = new GraphQLClient(process.env.HYGRAPH_DEV_ENDPOINT);
+const graphQLClient = new GraphQLClient('https://api-eu-central-1-shared-euc1-02.hygraph.com/v2/clrlu35ep0dnj01w3jxlg19yj/master');
 
 export const getPosts = async () => {
 
@@ -234,5 +233,3 @@ export const getFeaturedPosts = async () => {
 
   return result.posts;
 };
-
-

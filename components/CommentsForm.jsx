@@ -68,18 +68,18 @@ function CommentsForm({ slug }) {
             <div className='grid grid-cols-1 gap-4 mb-4'>
                 <div>
                     <input ref={storeDataEl} type='checkbox' id='storeData' name='storeData' />
-                    <label className='text-gray-500 cursor-pointer ml-2 text-xs' htmlFor='storeData'>Save my e-mail and name for the next time I comment.</label>
+                    <label className='text-gray-500 cursor-pointer ml-2 text-xs' htmlFor='storeData'>Salva Nome e Email per i prossimi commenti.</label>
                 </div>
             </div>
-            {error && <p className='text-xs text-red-500'>All fields are required.</p>}
+            {error && <p className='text-xs text-red-500'>Tutti i campi sono obbligatori.</p>}
             <div className='mt-8'>
                 <button type='button'
                     onClick={handleCommentSubmission}
                     className='transition duration-500 ease bg-teal-500 hover:bg-white hover:text-black border-teal-500 border inline-block text-white rounded-full px-8 py-3 cursor-pointer'
                 >
-                    Post Comment
+                    Commenta
                 </button>
-                {showSuccessMessage && <span className='text-xl float-right font-semibold mt-3 text-green-500'>Comment submitter for review</span>}
+                {showSuccessMessage && <span className='text-xl float-right font-semibold mt-3 text-green-500'>Commento inviato con successo.</span>}
             </div>
         </div>
     )

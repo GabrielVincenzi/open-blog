@@ -16,7 +16,6 @@ export default async function subforms(req, res) {
         headers: {
             Authorization: `Bearer ${process.env.HYGRAPH_DEV_AUTH_TOKEN}`,
         },
-        method: 'POST',
     });
 
     const result = await graphQLClient.request(mutation, req.body)

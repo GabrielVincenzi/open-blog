@@ -12,7 +12,7 @@ const CategoryPost = ({ posts }) => {
     }
 
     return (
-        <div className="container mx-auto px-10 mb-8">
+        <div className="container mx-auto sm:px-10 px-2 mb-8">
             <div className='shadow-lg bg-black bg-opacity-40 rounded-lg p-8 mb-8'>
                 <span className='cursor-pointer font-bold text-4xl text-white capitalize'>
                     {router.query.slug}

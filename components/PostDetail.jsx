@@ -26,7 +26,7 @@ function PostDetail({ post }) {
             case 'heading-three':
                 return <h3 key={index} className="text-xl text-teal-500 font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h3>;
             case 'paragraph':
-                return <p key={index} className="mb-8">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
+                return <p key={index} className="mb-8 text-justify">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</p>;
             case 'heading-four':
                 return <h4 key={index} className="text-md font-semibold mb-4">{modifiedText.map((item, i) => <React.Fragment key={i}>{item}</React.Fragment>)}</h4>;
             case 'image':
@@ -46,7 +46,7 @@ function PostDetail({ post }) {
 
     return (
         <div className='bg-white shadow-lg rounded-lg lg:p-8 pb-12 mb-8'>
-            <div className='relative oferflow-hidden shadow-md mb-6'>
+            <div className='relative overflow-hidden shadow-md mb-6'>
                 <img src={post.featuredImage.url} alt={post.title}
                     className='object-top h-full w-full rounded-t-lg' />
             </div>

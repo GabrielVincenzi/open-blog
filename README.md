@@ -1,6 +1,8 @@
+Useful informations to start the project and understand the code.
+
 Commands:
 npx create-node-app directly by terminal in Desktop REMOVING APP ROUTING
-npm install graphql graphql-request moment react-multi-carousel sass html-react-parser
+npm install graphql graphql-request moment react-multi-carousel sass html-react-parser hamburger-react
 npm run dev
 
 Header.jsx:
@@ -20,3 +22,11 @@ Having a dynamic generation via slug.js we have to use another async function ge
 
 getContentFragment():
 Function to render properly the posts' content.
+
+Git-repository creation:
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin ''
+git push -u origin main

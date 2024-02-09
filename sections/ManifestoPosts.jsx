@@ -8,11 +8,11 @@ import { getFeaturedPosts } from '../services';
 const responsive = {
     superLargeDesktop: {
         breakpoint: { max: 4000, min: 1024 },
-        items: 4,
+        items: 2,
     },
     desktop: {
         breakpoint: { max: 1024, min: 768 },
-        items: 3,
+        items: 2,
     },
     tablet: {
         breakpoint: { max: 768, min: 640 },
@@ -24,7 +24,7 @@ const responsive = {
     },
 };
 
-const FeaturedPosts = () => {
+const ManifestoPosts = () => {
     const [featuredPosts, setFeaturedPosts] = useState([]);
     const [dataLoaded, setDataLoaded] = useState(false);
 
@@ -62,4 +62,4 @@ const FeaturedPosts = () => {
     );
 };
 
-export default FeaturedPosts;
+export default ManifestoPosts;
