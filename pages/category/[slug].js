@@ -22,7 +22,7 @@ const CategoryPost = ({ posts }) => {
                 <div className="col-span-1 lg:col-span-8">
                     {posts.map((post, index) => (
                         <PostCard key={index} post={post.node} />
-                    ))}
+                    )).reverse()}
                 </div>
                 <div className="col-span-1 lg:col-span-4">
                     <div className="relative lg:sticky top-8">
