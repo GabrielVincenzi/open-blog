@@ -105,6 +105,7 @@ article.active .content {
 .navback {
     position: absolute;
     overflow: hidden;
+    overflow-x: hidden;
     z-index: 1;
     top: 10px;
     right: 10px;
