@@ -36,21 +36,6 @@ function Header() {
                             Open Ball
                         </span>
                     </Link>
-                    <div className='navigation'>
-                            <Link key='about' href='/about'>
-                                <div className='text-white mt-10 text-center text-3xl font-semibold cursor-pointer'>
-                                    About
-                                </div>
-                            </Link>
-                            {categories.map((category) => (
-                                <Link key={category.slug} href={`/category/${category.slug}`}>
-                                    <div className='text-white mt-10 text-center text-2xl font-semibold cursor-pointer'>
-                                        {category.name}
-                                    </div>
-                                </Link>
-                            ))}
-                        </div>
-                    </div>
                 </div>
                 <div className='hidden md:float-left md:contents'>
                     {categories.map((category) => (
