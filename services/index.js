@@ -111,7 +111,7 @@ export const getSimilarPosts = async (categories, slug) => {
     query GetPostDetails($slug: String!, $categories: [String!]) {
       posts(
         where: {slug_not: $slug, AND: {categories_some: {slug_in: $categories}}}
-        last: 3
+        last: 2
       ) {
         title
         featuredImage {
