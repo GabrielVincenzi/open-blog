@@ -37,11 +37,6 @@ function Header() {
                         </span>
                     </Link>
                     <div className='navigation'>
-                        <div ref={ref} className="md:hidden relative float-right text-white">
-                            <Hamburger className='hamburger' toggled={isMenuOpen} size={20} toggle={setMenuOpen} />
-                        </div>
-                        <div className={`navback ${isOpen}`}></div>
-                        <div className={`menu ${isOpen}`}>
                             <Link key='about' href='/about'>
                                 <div className='text-white mt-10 text-center text-3xl font-semibold cursor-pointer'>
                                     About
