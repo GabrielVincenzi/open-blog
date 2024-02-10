@@ -15,7 +15,7 @@ function blog() {
       <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 bg-white shadow-lg rounded-lg lg:p-10 mb-8 pt-8 px-8'>
         <img src='ob1.png' alt='information' className='w-80 mx-auto' />
         <div className="p-8">
-          <h3 className="mb-8 text-5xl font-semibold">Complessità alla portata di tutti.</h3>
+          <h3 className="mb-8 md:text-5xl text-4xl font-semibold">Complessità alla portata di tutti.</h3>
           <p className="text-gray-700 text-lg font-normal mb-8">
             Oggi più che mai siamo impietriti di fronte ad un'immensità di informazioni e non riusciamo a capire quali siano vere e quali no.
             Cerchiamo di fare chiarezza senza populismi, bensì con la buona informazione.
