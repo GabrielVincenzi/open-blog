@@ -34,11 +34,10 @@ export default function Home({ posts }) {
 // New async function to do so with or (||) for no resutls.
 // Then use this posts as props in the component Home.
 export async function getStaticProps() {
-    const posts = await getPosts() || [];
-
-    return {
-        props: { posts },
-        revalidate: 10,
-    }
+  const posts = (await getPosts()) || [];
+  return {
+    props: { posts },
+    revalidate: 10
+  };
 }
 
